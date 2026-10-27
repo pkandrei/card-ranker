@@ -7,3 +7,18 @@ Deciding what to keep and what to cut is one of the hardest parts of deck buildi
 ## Status
 
 Card Ranker is in early development. The project is currently being planned and set up, and there is nothing to run yet.
+
+## Planned features
+
+- Build decks and add cards, with each card matched to Scryfall data so its image and text appear automatically
+- Rate cards with fixed mana values and your own custom tags, organised into groups
+- See every card in a deck ranked on a leaderboard
+- Log in with an account from any device
+
+### Possible later additions
+
+- Importing a card's tags automatically from Scryfall Tagger
+- Format legality checks (Commander, Standard and so on)
+- Automatically linking cards that had no match once they appear in the dataset
+- Allow deck imports from other deckbuilding sites, such as Archidekt or Moxfield
+- A suggestion system for new cards
