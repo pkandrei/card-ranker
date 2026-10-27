@@ -33,3 +33,12 @@ Each card's score is built from three layers:
 3. **Synergies:** links between cards that raise or lower each other's scores. A soft cap keeps them from running away, so strong cards with no synergies still hold their own.
 
 Cards are then ranked by their final score.
+
+## Tech stack
+
+Planned, and subject to change as the project is set up:
+
+- **Python** with **FastAPI** for the backend
+- **SQLite** for data storage at first, moving to **PostgreSQL** when accounts are added, with **SQLAlchemy** and **Alembic** for models and migrations
+- Plain **HTML, CSS and JavaScript** for the frontend, followed by a planned migration to **React**
+- **pytest** and **Ruff** for testing and code quality
