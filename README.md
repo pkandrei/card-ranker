@@ -16,6 +16,10 @@ Card Ranker is in early development. The project is currently being planned and 
 - See every card in a deck ranked on a leaderboard
 - Log in with an account from any device
 
+## Roadmap
+
+Development is planned in milestones, tracked on GitHub: [view the milestones](https://github.com/pkandrei/card-ranker/milestones).
+
 ### Possible later additions
 
 - Importing a card's tags automatically from Scryfall Tagger
@@ -45,7 +49,7 @@ Planned, and subject to change as the project is set up:
 
 ## Licence and attribution
 
-The code in this repository is released under the [MIT Licence](LICENSE).
+The code in this repository is released under the [MIT Licence](https://github.com/pkandrei/card-ranker/blob/main/LICENSE).
 
 Card Ranker is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.
 
