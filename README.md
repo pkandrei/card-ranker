@@ -15,6 +15,7 @@ Card Ranker is in early development. The project is currently being planned and 
 - Mark synergies between cards that raise or lower each other's scores
 - See every card in a deck ranked on a leaderboard
 - Log in with an account from any device
+- Automatically link cards that had no match once they appear in the dataset
 
 ## Roadmap
 
@@ -24,9 +25,9 @@ Development is planned in milestones, tracked on GitHub: [view the milestones](h
 
 - Importing a card's tags automatically from Scryfall Tagger
 - Format legality checks (Commander, Standard and so on)
-- Automatically linking cards that had no match once they appear in the dataset
 - Deck imports from other sites, such as Archidekt or Moxfield
 - A suggestion system for new cards
+- Filtering out cards
 
 ## How scoring works
 
@@ -40,9 +41,12 @@ Cards are then ranked by their final score.
 
 ## Tech stack
 
+- **Python 3.14** as the project language
+- **uv** for dependency and environment management
+
 Planned, and subject to change as the project is set up:
 
-- **Python** with **FastAPI** for the backend
+- **FastAPI** for the backend API
 - **SQLite** for data storage at first, moving to **PostgreSQL** when accounts are added, with **SQLAlchemy** and **Alembic** for models and migrations
 - Plain **HTML, CSS and JavaScript** for the frontend, followed by a planned migration to **React**
 - **pytest** and **Ruff** for testing and code quality
