@@ -43,6 +43,7 @@ Cards are then ranked by their final score.
 
 - **Python 3.14** as the project language
 - **uv** for dependency and environment management
+- **pydantic-settings** for configuration read from environment variables, with a local `.env` file
 
 Planned, and subject to change as the project is set up:
 
