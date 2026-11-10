@@ -6,7 +6,7 @@ Deciding what to keep and what to cut is one of the hardest parts of deck buildi
 
 ## Status
 
-Card Ranker is in early development. The project is currently being planned and set up, and there is nothing to run yet.
+Card Ranker is in early development. The project is being set up, and so far only a minimal API with a health check exists. See [Getting started](#getting-started) to run it.
 
 ## Planned features
 
@@ -44,13 +44,45 @@ Cards are then ranked by their final score.
 - **Python 3.14** as the project language
 - **uv** for dependency and environment management
 - **pydantic-settings** for configuration read from environment variables, with a local `.env` file
+- **FastAPI** for the backend API
+- **Uvicorn** as the server that runs it
 
 Planned, and subject to change as the project is set up:
 
-- **FastAPI** for the backend API
 - **SQLite** for data storage at first, moving to **PostgreSQL** when accounts are added, with **SQLAlchemy** and **Alembic** for models and migrations
 - Plain **HTML, CSS and JavaScript** for the frontend, followed by a planned migration to **React**
 - **pytest** and **Ruff** for testing and code quality
+
+## Getting started
+
+### Prerequisites
+
+Install [uv](https://docs.astral.sh/uv/getting-started/installation/). It reads the Python version from the project and installs it if needed.
+
+### Install
+
+```
+git clone https://github.com/pkandrei/card-ranker.git
+cd card-ranker
+uv sync
+```
+
+### Configuration
+
+`.env.example` lists every setting. Copying it to `.env` is optional, since every setting has a default, and `.env` is ignored by git.
+
+### Run
+
+```
+uv run uvicorn app.main:app
+```
+
+The API is then available at http://127.0.0.1:8000.
+
+### Check that it works
+
+- http://127.0.0.1:8000/health returns `{"status": "ok"}`.
+- http://127.0.0.1:8000/docs shows the interactive API documentation, titled with the application name.
 
 ## Licence and attribution
 
