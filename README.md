@@ -6,7 +6,7 @@ Deciding what to keep and what to cut is one of the hardest parts of deck buildi
 
 ## Status
 
-Card Ranker is in early development. The project is being set up, and so far only a minimal API with a health check exists. See [Getting started](#getting-started) to run it.
+Card Ranker is in early development. The project is being set up, and so far only a minimal API with a health check and its first test exists. See [Getting started](#getting-started) to run it and its tests.
 
 ## Planned features
 
@@ -46,12 +46,13 @@ Cards are then ranked by their final score.
 - **pydantic-settings** for configuration read from environment variables, with a local `.env` file
 - **FastAPI** for the backend API
 - **Uvicorn** as the server that runs it
+- **pytest** for testing, with **httpx2** as the HTTP client behind FastAPI's test client
 
 Planned, and subject to change as the project is set up:
 
 - **SQLite** for data storage at first, moving to **PostgreSQL** when accounts are added, with **SQLAlchemy** and **Alembic** for models and migrations
 - Plain **HTML, CSS and JavaScript** for the frontend, followed by a planned migration to **React**
-- **pytest** and **Ruff** for testing and code quality
+- **Ruff** for code quality
 
 ## Getting started
 
@@ -83,6 +84,16 @@ The API is then available at http://127.0.0.1:8000.
 
 - http://127.0.0.1:8000/health returns `{"status": "ok"}`.
 - http://127.0.0.1:8000/docs shows the interactive API documentation, titled with the application name.
+
+### Run the tests
+
+`uv sync` already installs the testing tools, so the tests can be run straight away:
+
+```
+uv run pytest
+```
+
+All tests should pass.
 
 ## Licence and attribution
 
