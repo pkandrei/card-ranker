@@ -6,7 +6,7 @@ Deciding what to keep and what to cut is one of the hardest parts of deck buildi
 
 ## Status
 
-Card Ranker is in early development. Card Ranker is in early development. The project is being set up, and so far only a minimal API with a health check and its first test exists. See [Getting started](#getting-started) to run it and its tests.
+Card Ranker is in early development. The project is being set up, and so far only a minimal API with a health check and its first test exists. See [Getting started](#getting-started) to run it and its tests.
 
 ## Planned features
 
