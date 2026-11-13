@@ -1,4 +1,4 @@
-from functools import lru_cache
+from functools import cache
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -8,6 +8,6 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env")
 
 
-@lru_cache(maxsize=None)
+@cache
 def get_settings():
     return Settings()
