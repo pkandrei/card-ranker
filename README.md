@@ -47,12 +47,12 @@ Cards are then ranked by their final score.
 - **FastAPI** for the backend API
 - **Uvicorn** as the server that runs it
 - **pytest** for testing, with **httpx2** as the HTTP client behind FastAPI's test client
+- **Ruff** for linting and formatting
 
 Planned, and subject to change as the project is set up:
 
 - **SQLite** for data storage at first, moving to **PostgreSQL** when accounts are added, with **SQLAlchemy** and **Alembic** for models and migrations
 - Plain **HTML, CSS and JavaScript** for the frontend, followed by a planned migration to **React**
-- **Ruff** for code quality
 
 ## Getting started
 
@@ -94,6 +94,16 @@ uv run pytest
 ```
 
 All tests should pass.
+
+### Check code quality
+
+```
+uv run ruff check .
+uv run ruff format --check .
+```
+
+The first command lints the code and the second checks that it is formatted.
+Both report problems without changing any files.
 
 ## Licence and attribution
 
