@@ -17,3 +17,19 @@ dev = [
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
+
+[tool.ruff.lint]
+# Ruff's defaults plus the families chosen in the Ruff decision record
+# (see docs/decisions/).
+extend-select = [
+    "B",    # likely bugs
+    "C4",   # comprehensions
+    "DTZ",  # timezone-aware dates
+    "FAST", # FastAPI
+    "I",    # import sorting
+    "N",    # naming
+    "PT",   # pytest style
+    "PTH",  # pathlib
+    "SIM",  # simplifications
+    "UP",   # modernisation
+]
