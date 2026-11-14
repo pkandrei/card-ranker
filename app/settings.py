@@ -9,6 +9,5 @@ class Settings(BaseSettings):
 
 
 @cache
-
 def get_settings():
     return Settings()
