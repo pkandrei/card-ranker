@@ -8,7 +8,7 @@ PLACEHOLDER = "unknown"
 logger = logging.getLogger(__name__)
 
 
-def retrieve_version(path: Path):
+def read_file_for_version(path: Path):
     try:
         with path.open("rb") as f:
             data = tomllib.load(f)
@@ -30,4 +30,4 @@ def retrieve_version(path: Path):
 @cache
 def get_version():
     app_dir = Path(__file__).parent
-    return retrieve_version(app_dir.parent / "pyproject.toml")
+    return read_file_for_version(app_dir.parent / "pyproject.toml")
