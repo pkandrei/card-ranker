@@ -33,3 +33,6 @@ extend-select = [
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
+
+[tool.uv]
+required-version = "==0.13.7"
