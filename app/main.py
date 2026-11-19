@@ -1,5 +1,3 @@
-import os
-
 from fastapi import FastAPI
 
 from app.settings import get_settings
@@ -12,4 +10,4 @@ app = FastAPI(title=title, version=version)
 
 @app.get("/health")
 def health():
-    return {"status": "ok"}
+    return {'status': 'ok'}
